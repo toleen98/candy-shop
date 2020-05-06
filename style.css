@@ -56,3 +56,29 @@
   background-color: #555;
   color: white;
 }
+
+#cont {
+ display: flex;
+}
+
+.left {
+  flex: 30%;
+}
+
+.right {
+  flex: 70%;
+  padding-left: 90px;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.item {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+.itemImg {
+  width: 200px;
+  height: 200px;
+}
