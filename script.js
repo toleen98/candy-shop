@@ -7,7 +7,7 @@ function myItems(pic, name, price){
 
 	}
 }
-var array=["https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,4$","https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,4$","https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,4$","https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,4$","https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,4$"]
+var array=["https://i.pinimg.com/564x/89/79/9b/89799beb3abb0130c4eb206fbdb1b44e.jpg,candy,2$","https://i.pinimg.com/474x/66/32/a5/6632a53a1e6a33c727ed73cf1825deea.jpg,candy,4$","https://i.pinimg.com/474x/07/c7/d3/07c7d35dd6dd6b93f8b0ec6f084be04c.jpg,candy,6$","https://i.pinimg.com/564x/05/94/63/059463624cac68a50303ad8e3c7672c0.jpg,candy,12$","https://i.pinimg.com/474x/2f/ae/35/2fae357bbabd8dce657cf1dde77e9b59.jpg,candy,7$"]
 
 function ourShopcandy(array){
 	var arr=[]
