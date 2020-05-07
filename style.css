@@ -16,48 +16,39 @@ p {
     text-align:center;
     color: #069;
 }
-#navbar {
-  overflow: hidden;
-  background-color:gray;
-  display: flex;
+#contanier{
+  text-align: center;
+  padding: 0px 0px;
+    word-wrap: normal;
+    width:862px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    margin-bottom:20px;
 
-}
-#navbar a {
-
-  color: #f2f2f2;
   
-  padding: 30px 120px;
-  text-decoration: none;
-  font-size: 17px;
-
-
 }
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-   float: left;
+#img1{
+  border-radius: 80%;
+   max-width: 100%;
+  height: auto;
+  margin: 10px
+  
+}
+#img2{
+  border-radius: 50%;
+   max-width: 100%;
+  height: auto;
+  
+}
+#img3{
+  border-radius: 80%;
+   max-width: 100%;
+  height: auto;
+  margin: 10px
+  
 }
 
-#active {
- /* background-color: #4CAF50;*/
- text-align: center;
-  color: white;
-  flex: 35%
-  margin-left:20px;
-   float: left;
-
-
-}
-
-#acitve2{
-  position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-}
-#active3{
-   float: right;
-}
 #des{
   
   padding: 20px 10px;
@@ -95,26 +86,8 @@ background-color: gray; /* Green */
 #pra1{
   text-align: center;
 }
-#img1{
-  border-radius: 80%;
-   max-width: 100%;
-  height: auto;
-  margin: 20px
-  
-}
-#img2{
-  border-radius: 50%;
-   max-width: 100%;
-  height: auto;
-  
-}
-#img3{
-  border-radius: 80%;
-   max-width: 100%;
-  height: auto;
-  margin: 20px
-  
-}
+
+
 h2 {
   color: white;
   font-weight: bold;
@@ -197,6 +170,7 @@ h2 {
   float: left;
   width: 30%;
   padding: 5px;
+  padding-top: 10px;
 }
 
 .itemImg {
