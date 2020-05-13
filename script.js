@@ -58,9 +58,7 @@ $("#loadmore").click(function MakeItem(){
     $(".bton").css({"opacity":"0"})
 
  	$(div2).css({
-   "margin-top": "37px",
-   "padding-left": "30px"
-
+   "margin-top": "40px"
  })
    
  	//action for item div while hover

@@ -157,6 +157,7 @@ h2 {
   width: 30%;
   padding: 5px;
   padding-bottom: 37px;
+
  }
 
 .itemImg {
@@ -167,21 +168,50 @@ h2 {
 
 .bton{
   background: black;
+  border: none;
   color: white;
   width: 225px;
   position: relative;
   right: 37px;
-  margin-top: 30px;
-
-
+  margin-top: 25px;
+  font-weight:100;
+  padding: 5px 15px;
+  font-size: 12px;
 }
+
  h4 {
   height: 15px;
-  padding-left: 30px;
+  padding-left: 40px;
+  font-weight:100;
+  font-size: 16px;
+   
  }
 
 .itemText {
-  margin-top: 37px;
+  margin-top: 40px;
   /*padding-left: 30px;*/
 }
 
+#loadmore {
+  background: #cde9f7;
+  border: none;
+  color: #555;
+  padding: 5px 15px;
+
+}
+
+.cart .badge {
+  position: absolute;
+  top: 1px;
+  right: 30px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  background-color: #cde9f7;
+  color: #555;
+}
+
+.cart {
+  
+  position: relative;
+  display: inline-block;
+}
