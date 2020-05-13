@@ -12,6 +12,7 @@ p {
     text-align:center;
     color: #069;
 }
+
 #contanier{
   text-align: center;
     width:862px;
@@ -155,10 +156,32 @@ h2 {
   float: left;
   width: 30%;
   padding: 5px;
-  padding-top: 10px;
-}
+  padding-bottom: 37px;
+ }
 
 .itemImg {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
+
+
+.bton{
+  background: black;
+  color: white;
+  width: 225px;
+  position: relative;
+  right: 37px;
+  margin-top: 30px;
+
+
+}
+ h4 {
+  height: 15px;
+  padding-left: 30px;
+ }
+
+.itemText {
+  margin-top: 37px;
+  /*padding-left: 30px;*/
+}
+

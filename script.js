@@ -17,30 +17,83 @@ return array.map(function(item){
 
 }
 //using jequery
+
+//hide add cart button
+// $(".bton").hide();
+
 $("#loadmore").click(function MakeItem(){
  ourShopcandy(array).forEach(function(item) {
- 	var div=$("<div></div>")
- 	div.addClass("item")
- 	$("#shopItem").append(div)
- 	var img=$("<img>")
+ 	//item contaner div
+ 	var div=$("<div></div>");
+ 	div.addClass("item");
+     $(".right").append(div)
+ 	
+    //text item contaner
+ 	var div2=$("<div></div>");
+ 	div.addClass("itemText");
+
+ 	$("#shopItem").append(div);
+
+ 	var img=$("<img>");
  	img.addClass("itemImg")
  	img.attr("src",item.pic)
- 	img.appendTo(div)
+ 	img.appendTo(div);
+
  	var name=$("<h4></h4>");
  	name.text(item.name);
- 	name.appendTo(div)
+ 	div2.append(name)
+
  	var price=$("<h4></h4>");
  	price.text(item.price);
- 	price.appendTo(div)
+ 	div2.append(price)
+
+ 	div.append(div2);
+
+
+ 	//add cart bottun
  	var btn=$("<button>Add To Cart</button>")
  	btn.addClass("bton")
  	btn.appendTo(div)
+ 	
+    $(".bton").css({"opacity":"0"})
+
+ 	$(div2).css({
+   "margin-top": "37px",
+   "padding-left": "30px"
 
  })
- 
+   
+ 	//action for item div while hover
+ 	$(".item").hover(function() {
+	$(this ).find(".itemImg").css(
+  "transform", "scale(1.5)")
+  $(this).find(".bton").css({"opacity":"1"})
 
+},function() {
+	$( this ).find(".itemImg").css(
+  "transform", "scale(1)");
+	$(this).find(".bton").css( {"opacity":"0"} )
 })
 
+ })
+ })
+
+
+$(".bton").css({"opacity":"0"})
 $(".bton").click(function addTocart() {
    alert("item has been added")
 })
+
+//increase the scale of img while hover
+$(".item").hover(function() {
+	$(this ).find(".itemImg").css(
+  "transform", "scale(1.5)")
+  $(this).find(".bton").css({"opacity":"1"})
+
+},function() {
+	$( this ).find(".itemImg").css(
+  "transform", "scale(1)");
+	$(this).find(".bton").css( {"opacity":"0"} )
+})
+
+
