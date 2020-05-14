@@ -16,21 +16,22 @@ return array.map(function(item){
 })
 
 }
+
+var cart=[];
+
 //using jequery
 
 //hide add cart button
 // $(".bton").hide();
 
-$("#loadmore").click(function MakeItem(){
+$("#loadmore").click(function(){
  ourShopcandy(array).forEach(function(item) {
  	//item contaner div
  	var div=$("<div></div>");
  	div.addClass("item");
      $(".right").append(div)
  	
-    //text item contaner
- 	var div2=$("<div></div>");
- 	div.addClass("itemText");
+ 	
 
  	$("#shopItem").append(div);
 
@@ -39,15 +40,12 @@ $("#loadmore").click(function MakeItem(){
  	img.attr("src",item.pic)
  	img.appendTo(div);
 
- 	var name=$("<h4></h4>");
- 	name.text(item.name);
- 	div2.append(name)
+ 	var nameAndPrice=$("<p></p>");
+ 	nameAndPrice.html(item.name +"<br>"+item.price);
+ 	nameAndPrice.addClass("itemText")
+ 	div.append(nameAndPrice)
 
- 	var price=$("<h4></h4>");
- 	price.text(item.price);
- 	div2.append(price)
-
- 	div.append(div2);
+ 	
 
 
  	//add cart bottun
@@ -57,8 +55,8 @@ $("#loadmore").click(function MakeItem(){
  	
     $(".bton").css({"opacity":"0"})
 
- 	$(div2).css({
-   "margin-top": "40px"
+ 	$(nameAndPrice).css({
+   "margin-top": "40px","padding-left": "0px"
  })
    
  	//action for item div while hover
@@ -92,13 +90,7 @@ $(".item").hover(function() {
 	$(this).find(".bton").css( {"opacity":"0"} )
 })
 
-// <div id="mySidenav" class="sidenav">
-//   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-//   <a href="#">About</a>
-//   <a href="#">Services</a>
-//   <a href="#">Clients</a>
-//   <a href="#">Contact</a>
-// </div>
+
 
 function cartNav(){
 	var div= $("<div></div>");
@@ -106,15 +98,35 @@ function cartNav(){
 	$(div).attr("id","cartNav");
 
 	var a =$("<a >&times;</a>")
-	$(a).attr({"href":"javascript:void(0)","class":"closebtn"})
+	$(a).attr({"href":"javascript:void(0)"})
+	$(a).addClass("closebtn")
 	$(div).append(a)
 
     $(".first").after(div)
-    $("#cartNav").css({"width": "250px"})
+    $(div).css({"opacity":"1"})
+    //close btn functhionlity
+    $(".closebtn").click( function() {
+	
+	$("body > *:not(#cartNav)").css({"opacity":"1"});
+    $("#cartNav").css({"width": "0"})
+})
 }
 
+//open cart tab
 $(".cart").click(function() {
-  $( window ).on( "load", cartNav())
-  
+	$("body > *:not(#cartNav)").css({"opacity":"0.5"});
+    $( window ).on( "load", cartNav());
+    $("#cartNav").css({"width": "300px"})
+    $("#cartNav").append(cart)
 })
 
+
+//add to cart tap+ cart array
+$(".bton").click(function() {
+	var item=$(this).parent()
+	$(item).find(".bton").hide()
+	var Quantity=$("<p></p>")
+    $(item).append(Quantity)
+	cart.push(item.html())	
+
+})
