@@ -78,9 +78,7 @@ $("#loadmore").click(function MakeItem(){
 
 
 $(".bton").css({"opacity":"0"})
-$(".bton").click(function addTocart() {
-   alert("item has been added")
-})
+
 
 //increase the scale of img while hover
 $(".item").hover(function() {
@@ -94,4 +92,29 @@ $(".item").hover(function() {
 	$(this).find(".bton").css( {"opacity":"0"} )
 })
 
+// <div id="mySidenav" class="sidenav">
+//   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+//   <a href="#">About</a>
+//   <a href="#">Services</a>
+//   <a href="#">Clients</a>
+//   <a href="#">Contact</a>
+// </div>
+
+function cartNav(){
+	var div= $("<div></div>");
+
+	$(div).attr("id","cartNav");
+
+	var a =$("<a >&times;</a>")
+	$(a).attr({"href":"javascript:void(0)","class":"closebtn"})
+	$(div).append(a)
+
+    $(".first").after(div)
+    $("#cartNav").css({"width": "250px"})
+}
+
+$(".cart").click(function() {
+  $( window ).on( "load", cartNav())
+  
+})
 
