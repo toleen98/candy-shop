@@ -243,6 +243,16 @@ h2 {
   margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-  #cartNav {padding-top: 15px;}
+
+/*#cartNav .itemImg {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 20%;
+  
 }
+
+#cartNav .item{
+  margin-bottom: 30%;
+}
+*/

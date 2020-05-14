@@ -19,6 +19,7 @@ return array.map(function(item){
 
 var cart=[];
 
+
 //using jequery
 
 //hide add cart button
@@ -104,11 +105,17 @@ function cartNav(){
 
     $(".first").after(div)
     $(div).css({"opacity":"1"})
+
+   $("#cartNav").append(cart)
+    
     //close btn functhionlity
     $(".closebtn").click( function() {
 	
 	$("body > *:not(#cartNav)").css({"opacity":"1"});
     $("#cartNav").css({"width": "0"})
+    
+
+
 })
 }
 
@@ -117,7 +124,8 @@ $(".cart").click(function() {
 	$("body > *:not(#cartNav)").css({"opacity":"0.5"});
     $( window ).on( "load", cartNav());
     $("#cartNav").css({"width": "300px"})
-    $("#cartNav").append(cart)
+
+    
 })
 
 
@@ -127,6 +135,15 @@ $(".bton").click(function() {
 	$(item).find(".bton").hide()
 	var Quantity=$("<p></p>")
     $(item).append(Quantity)
-	cart.push(item.html())	
+	cart.push(item.html())
+	 
+//     cart.forEach(function(item) {
+// 	 $(item).find(".item").css({"transform": "scale(0.5)" })
+
+// })
+    $(".badge").text(cart.length)
+
 
 })
+
+
