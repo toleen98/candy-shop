@@ -1,0 +1,10 @@
+main () // computes the average of SE MSc SE&M students
+{ 
+float Average , Sum, int I; 
+terminate_var=14 I = 1
+while (I <= terminate_var) 
+do {read A[I] I =I+1 } 
+I= 1, Sum =0.0 
+while (I <= terminate_var) 
+do {Sum = Sum + A[I] I =I+1 }
+Average = Sum/terminatr_var }//end main
